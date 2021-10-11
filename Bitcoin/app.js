@@ -15,7 +15,7 @@ btn.addEventListener('click', () => {
   //   console.log("Test")
   let XHR = new XMLHttpRequest();
 
-  XHR.onreadystatechange = function () {
+  XHR.onreadystatechange =  () => {
     if (XHR.readyState == 4 && XHR.status == 200) {
       let data = JSON.parse(XHR.responseText);
       let priceUSD = data.bpi[currencyUSD].rate;
