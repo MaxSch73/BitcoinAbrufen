@@ -9,13 +9,10 @@ let currencyUSD = 'USD';
 let currencyEUR = 'EUR';
 let currencyGBP = 'GBP';
 
-//listen for clicks
 btn.addEventListener('click', () => {
-  //make the request
-  //   console.log("Test")
   let XHR = new XMLHttpRequest();
 
-  XHR.onreadystatechange =  () => {
+  XHR.onreadystatechange = () => {
     if (XHR.readyState == 4 && XHR.status == 200) {
       let data = JSON.parse(XHR.responseText);
       let priceUSD = data.bpi[currencyUSD].rate;
